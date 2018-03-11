@@ -1,0 +1,13 @@
+.weatherInformer19{background:#fff;border:1px solid #ccc;box-sizing:border-box;color:#000 !important;display:block;font:400 12px/12px Arial;overflow:hidden;position:relative;text-decoration:none!important;width:160px;}
+.weatherInformer19:hover{text-decoration:none;color:#000 !important;}
+.weatherInformer19 ul{margin:0;padding:0;list-style:none;width:100%;background:#ffd6b5;display:table}
+.weatherInformer19 ul li{margin:0!important;padding:0!important;overflow:hidden!important;height:35px!important;display:table-row!important;line-height:13px!important;background:none!important;color:#000}
+.weatherInformer19 ul li span{display:table-cell;vertical-align:middle;text-align:left;font-size:11px;padding-top:1px;}
+.weatherInformer19 ul li .weatherInformer19-day{width:40%;padding-left:8px;border-bottom:1px solid #fff;}
+.weatherInformer19 ul li .weatherInformer19-icon{width:20%;text-align:right;vertical-align:top;border-bottom:1px solid #fff;}
+.weatherInformer19 ul li .weatherInformer19-icon img{border:none;position:relative;top:2px;right:4px}
+.weatherInformer19 ul li .weatherInformer19-temp{width:40%;border-bottom:1px solid #fff;}
+.weatherInformer19 ul li .weatherInformer19-temp b{font-size:12px;}
+.weatherInformer19 div.weatherInformer19-city{font-weight:700;text-align:center; font-size:14px; white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding:5px 0 4px 0}
+.weatherInformer19 div.weatherInformer19-logo{text-align:left;height:21px;background:url(//static.world-weather.ru/images/foreca.png) no-repeat 100% 7px;overflow:hidden;}
+.weatherInformer19 div.weatherInformer19-logo img{border:none;position:relative;top:2px;left:6px;}

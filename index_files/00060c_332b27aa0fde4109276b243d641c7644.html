@@ -1,0 +1,106 @@
+
+<!-- saved from url=(0097)https://nikitiveronika-wixsite-com.filesusr.com/html/00060c_332b27aa0fde4109276b243d641c7644.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script language="JavaScript">
+<!--
+<!-- Begin
+monthnames = new Array(
+"Январь",
+"Февраль",
+"Март",
+"Апрель",
+"Май",
+"Июнь",
+"Июль",
+"Август",
+"Сентябрь",
+"Октябрь",
+"Ноябрь",
+"Декабрь");
+var linkcount=0;
+function addlink(month, day, href) {
+var entry = new Array(3);
+entry[0] = month;
+entry[1] = day;
+entry[2] = href;
+this[linkcount++] = entry;
+}
+Array.prototype.addlink = addlink;
+linkdays = new Array();
+monthdays = new Array(12);
+monthdays[0]=31;
+monthdays[1]=28;
+monthdays[2]=31;
+monthdays[3]=30;
+monthdays[4]=31;
+monthdays[5]=30;
+monthdays[6]=31;
+monthdays[7]=31;
+monthdays[8]=30;
+monthdays[9]=31;
+monthdays[10]=30;
+monthdays[11]=31;
+todayDate=new Date();
+thisday=todayDate.getDay();
+thismonth=todayDate.getMonth();
+thisdate=todayDate.getDate();
+thisyear=todayDate.getYear();
+thisyear = thisyear % 100;
+thisyear = ((thisyear < 50) ? (2000 + thisyear) : (1900 + thisyear));
+if (((thisyear % 4 == 0) 
+&& !(thisyear % 100 == 0))
+||(thisyear % 400 == 0)) monthdays[1]++;
+startspaces=thisdate;
+while (startspaces > 7) startspaces-=7;
+startspaces = thisday - startspaces + 1;
+if (startspaces < 0) startspaces+=7;
+document.write("<table border=1 bgcolor=#F6F6F6 bordercolor=#6699CC>");
+document.write("<tr><td colspan=7 align=center><b><font size=2>" + monthnames[thismonth] + " " + thisyear + "</font></b></td></tr>");
+document.write("<tr>");
+document.write("<td align=center><font size=2>Вс</font></td>");
+document.write("<td align=center><font size=2>Пн</font></td>");
+document.write("<td align=center><font size=2>Вт</font></td>");
+document.write("<td align=center><font size=2>Ср</font></td>");
+document.write("<td align=center><font size=2>Чт</font></td>");
+document.write("<td align=center><font size=2>Пт</font></td>");
+document.write("<td align=center><font size=2>Сб</font></td>"); 
+document.write("</tr>");
+document.write("<tr>");
+for (s=0;s<startspaces;s++) {
+document.write("<td></td>");
+}
+count=1;
+while (count <= monthdays[thismonth]) {
+for (b = startspaces;b<7;b++) {
+linktrue=false;
+document.write("<td><font size=2>");
+for (c=0;c<linkdays.length;c++) {
+if (linkdays[c] != null) {
+if ((linkdays[c][0]==thismonth + 1) && (linkdays[c][1]==count)) {
+document.write("<a href=\"" + linkdays[c][2] + "\">");
+linktrue=true;}
+}
+}
+if (count==thisdate) {
+document.write("<font color='FF0000'><b>");
+}
+if (count <= monthdays[thismonth]) {
+document.write(count);
+}
+else {
+document.write(" ");
+}
+if (count==thisdate) {
+document.write("</b></font>");
+}
+if (linktrue)
+document.write("</a>");
+document.write("</font></td>");
+count++;
+}
+document.write("</tr>");
+startspaces=0;
+}
+document.write("</table>");
+// End
+// -->
+</script></head><body><table border="1" bgcolor="#F6F6F6" bordercolor="#6699CC"><tbody><tr><td colspan="7" align="center"><b><font size="2">Март 2018</font></b></td></tr><tr><td align="center"><font size="2">Вс</font></td><td align="center"><font size="2">Пн</font></td><td align="center"><font size="2">Вт</font></td><td align="center"><font size="2">Ср</font></td><td align="center"><font size="2">Чт</font></td><td align="center"><font size="2">Пт</font></td><td align="center"><font size="2">Сб</font></td></tr><tr><td></td><td></td><td></td><td></td><td><font size="2">1</font></td><td><font size="2">2</font></td><td><font size="2">3</font></td></tr><tr><td><font size="2">4</font></td><td><font size="2">5</font></td><td><font size="2">6</font></td><td><font size="2">7</font></td><td><font size="2">8</font></td><td><font size="2">9</font></td><td><font size="2">10</font></td></tr><tr><td><font size="2"><font color="FF0000"><b>11</b></font></font></td><td><font size="2">12</font></td><td><font size="2">13</font></td><td><font size="2">14</font></td><td><font size="2">15</font></td><td><font size="2">16</font></td><td><font size="2">17</font></td></tr><tr><td><font size="2">18</font></td><td><font size="2">19</font></td><td><font size="2">20</font></td><td><font size="2">21</font></td><td><font size="2">22</font></td><td><font size="2">23</font></td><td><font size="2">24</font></td></tr><tr><td><font size="2">25</font></td><td><font size="2">26</font></td><td><font size="2">27</font></td><td><font size="2">28</font></td><td><font size="2">29</font></td><td><font size="2">30</font></td><td><font size="2">31</font></td></tr></tbody></table></body></html>
